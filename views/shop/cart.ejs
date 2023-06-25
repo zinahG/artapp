@@ -1,0 +1,36 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <main>
+        <% if (artworks.length > 0) { %>
+        <ul class="cart__item-list">
+            <% artworks.forEach(p => { %>
+            <li class="cart__item">
+                <% console.log(p.artworkId); %>
+                <h1><%= p.artworkId.title %></h1>
+                <h2>Quantity: <%= p.quantity %></h2>
+                <form action="/cart-delete-item" method="POST">
+                    <input type="hidden" value="<%= p.artworkId._id %>" name="artworkId">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button class="btn danger" type="submit">Delete</button>
+                </form>
+            </li>
+            <% }) %>
+        </ul>
+        <hr>
+        <div class="centered">
+            <a class="btn" href="/checkout">Order Now!</a>
+        </div>
+        <% } else { %>
+        <h2>No items in the cart</h2>
+        <% } %>
+    </main>
+</body>
+
+
+
+
+

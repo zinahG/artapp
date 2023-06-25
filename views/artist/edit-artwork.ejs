@@ -1,0 +1,242 @@
+<!-- <%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/artwork.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (errorMessage) { %>
+            <div class="artist-message artist-message--error"><%= errorMessage %></div>
+        <% } %>
+        <form class="artwork-form" action="/artist/<% if (editing) { %>edit-artwork<% } else { %>add-artwork<% } %>" method="POST" enctype="multipart/form-data">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'title') ? 'invalid' : '' %>"
+                    type="text" 
+                    name="title" 
+                    id="title" 
+                    value="<% if (editing || hasError) { %><%= artwork.title %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="image">Image</label>
+                <input 
+                    type="file" 
+                    name="image" 
+                    id="image" >
+            </div>
+            <div class="form-control">
+                <label for="price">Price</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'price') ? 'invalid' : '' %>"
+                    type="number" 
+                    name="price" 
+                    id="price" 
+                    step="0.01" 
+                    value="<% if (editing || hasError) { %><%= artwork.price %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="description">Description</label>
+                <textarea 
+                    class="<%= validationErrors.find(e => e.param === 'description') ? 'invalid' : '' %>"
+                    name="description" 
+                    id="description" 
+                    rows="5"><% if (editing || hasError) { %><%= artwork.description %><% } %></textarea>
+            </div>
+            <% if (editing) { %>
+                <input type="hidden" value="<%= artwork._id %>" name="artworkId">
+              <% } %>              
+
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class="btn" type="submit"><% if (editing) { %>Update Artwork<% } else { %>Add Artwork<% } %></button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %> -->
+
+
+<!-- ///////////////////////// -->
+
+<!-- <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/forms.css">
+<link rel="stylesheet" href="/css/artwork.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (errorMessage) { %>
+            <div class="artist-message artist-message--error"><%= errorMessage %></div>
+        <% } %>
+        <form class="artwork-form" action="/artist/<% if (editing) { %>edit-artwork<% } else { %>add-artwork<% } %>" method="POST" enctype="multipart/form-data">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'title') ? 'invalid' : '' %>"
+                    type="text" 
+                    name="title" 
+                    id="title" 
+                    value="<% if (editing || hasError) { %><%= artwork.title %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="image">Image</label>
+                <input 
+                    type="file" 
+                    name="image" 
+                    id="image" >
+            </div>
+            <div class="form-control">
+                <label for="price">Price</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'price') ? 'invalid' : '' %>"
+                    type="number" 
+                    name="price" 
+                    id="price" 
+                    step="0.01" 
+                    value="<% if (editing || hasError) { %><%= artwork.price %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="description">Description</label>
+                <textarea 
+                    class="<%= validationErrors.find(e => e.param === 'description') ? 'invalid' : '' %>"
+                    name="description" 
+                    id="description" 
+                    rows="5"><% if (editing || hasError) { %><%= artwork.description %><% } %></textarea>
+            </div>
+            <div class="form-control-check">
+                <input 
+                    type="checkbox"
+                    name="ownArtwork"
+                    id="ownArtwork"
+                    required>
+                <label for="ownArtwork" style="display: inline;">I certify that I am the original creator of this artwork.</label>
+            </div>
+            <% if (editing) { %>
+                <input type="hidden" value="<%= artwork._id %>" name="artworkId">
+            <% } %>              
+
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class="btn" type="submit"><% if (editing) { %>Update Artwork<% } else { %>Add Artwork<% } %></button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %> -->
+
+
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/forms.css">
+<link rel="stylesheet" href="/css/artwork.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (errorMessage) { %>
+            <div class="artist-message artist-message--error"><%= errorMessage %></div>
+        <% } %>
+        <form class="artwork-form" action="/artist/<% if (editing) { %>edit-artwork<% } else { %>add-artwork<% } %>" method="POST" enctype="multipart/form-data">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'title') ? 'invalid' : '' %>"
+                    type="text" 
+                    name="title" 
+                    id="title" 
+                    value="<% if (editing || hasError) { %><%= artwork.title %><% } %>">
+            </div>
+            <!-- <div class="form-control">
+                <label for="imageUrl">Image URL</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'imageUrl') ? 'invalid' : '' %>"
+                    type="text" 
+                    name="imageUrl" 
+                    id="imageUrl" 
+                    value="<% if (editing || hasError) { %><%= artwork.imageUrl %><% } %>">
+            </div> -->
+            <div class="form-control">
+                <label for="image">Image</label>
+                <input 
+                    type="file" 
+                    name="image" 
+                    id="image" >
+            </div>
+            <div class="form-control">
+                <label for="price">Price</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'price') ? 'invalid' : '' %>"
+                    type="number" 
+                    name="price" 
+                    id="price" 
+                    step="0.01" 
+                    value="<% if (editing || hasError) { %><%= artwork.price %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="description">Description</label>
+                <textarea 
+                    class="<%= validationErrors.find(e => e.param === 'description') ? 'invalid' : '' %>"
+                    name="description" 
+                    id="description" 
+                    rows="5"><% if (editing || hasError) { %><%= artwork.description %><% } %></textarea>
+            </div>
+            <div class="form-control">
+                <label for="artistName">Artist Name</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'artistName') ? 'invalid' : '' %>"
+                    type="text" 
+                    name="artistName" 
+                    id="artistName" 
+                    value="<% if (editing || hasError) { %><%= artwork.artistName %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="quantity">Quantity</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'quantity') ? 'invalid' : '' %>"
+                    type="number" 
+                    name="quantity" 
+                    id="quantity" 
+                    value="<% if (editing || hasError) { %><%= artwork.quantity %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="available" <% if ((editing || hasError) && artwork.status === "available") { %>selected<% } %>>Available</option>
+                    <option value="sold" <% if ((editing || hasError) && artwork.status === "sold") { %>selected<% } %>>Sold</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>"
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    value="<% if (editing || hasError) { %><%= artwork.contactInfo.email %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="phone">Phone</label>
+                <input 
+                    class="<%= validationErrors.find(e => e.param === 'phone') ? 'invalid' : '' %>"
+                    type="tel" 
+                    name="phone" 
+                    id="phone" 
+                    value="<% if (editing || hasError) { %><%= artwork.contactInfo.phone %><% } %>">
+            </div>
+            <div class="form-control-check">
+                <input 
+                    type="checkbox"
+                    name="ownArtwork"
+                    id="ownArtwork"
+                    required>
+                <label for="ownArtwork" style="display: inline;">I certify that I am the original creator of this artwork.</label>
+            </div>
+            <% if (editing) { %>
+                <input type="hidden" value="<%= artwork._id %>" name="artworkId">
+            <% } %>              
+
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class="btn" type="submit"><% if (editing) { %>Update Artwork<% } else { %>Add Artwork<% } %></button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>

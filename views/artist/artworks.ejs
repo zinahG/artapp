@@ -1,0 +1,89 @@
+<!-- <%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/artwork.css">
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <% if (artworks.length > 0) { %>
+                    <div class="grid">
+                        <% for (let artwork of artworks) { %>
+                            <article class="card artwork-item">
+                                <header class="card__header">
+                                    <h1 class="artwork__title">
+                                        <%= artwork.title %>
+                                    </h1>
+                                </header>
+                                <div class="card__image">
+                                    <img src="/<%= artwork.imageUrl %>" alt="<%= artwork.title %>">
+                                </div>
+                                <div class="card__content">
+                                    <h2 class="artwork__price">$
+                                        <%= artwork.price %>
+                                    </h2>
+                                    <p class="artwork__description">
+                                        <%= artwork.description %>
+                                    </p>
+                                </div>
+                                <div class="card__actions">
+                                    <a href="/artist/edit-artwork/<%= artwork._id %>?edit=true" class="btn">Edit</a>
+                                    <input type="hidden" value="<%= artwork._id %>" name="artworkId">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <button class="btn" type="button" onclick="deleteArtwork(this)">Delete</button>
+                                </div>
+                            </article>
+                            <% } %>
+                    </div>
+                    <% } else { %>
+                        <h1>No Artworks Found!</h1>
+                        <% } %>
+            </main>
+            <%- include('../includes/end.ejs') %>
+            <script src="/js/artist.js"></script> -->
+
+
+            <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/artwork.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (artworks.length > 0) { %>
+            <div class="grid">
+                <% for (let artwork of artworks) { %>
+                    <article class="card artwork-item">
+                        <header class="card__header">
+                            <h1 class="artwork__title">
+                                <%= artwork.title %>
+                            </h1>
+                        </header>
+                        <div class="card__image">
+                            <img src="/<%= artwork.imageUrl %>" alt="<%= artwork.title %>">
+                        </div>
+                        <div class="card__content">
+                            <h2 class="artwork__price">$<%= artwork.price %></h2>
+                            <p class="artwork__description"><%= artwork.description %></p>
+                            <p class="artwork__artist">Artist: <%= artwork.artistName %></p>
+                            <p class="artwork__quantity">Quantity: <%= artwork.quantity %></p>
+                            <p class="artwork__status">Status: <%= artwork.status %></p>
+                            <p class="artwork__email">Email: <%= artwork.contactInfo.email %></p>  
+                            <p class="artwork__phone">Phone: <%= artwork.contactInfo.phone %></p>  
+                        </div>
+                        <div class="card__actions">
+                            <a href="/artist/edit-artwork/<%= artwork._id %>?edit=true" class="btn">Edit</a>
+                            <input type="hidden" value="<%= artwork._id %>" name="artworkId">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <button class="btn" type="button" onclick="deleteArtwork(this)">Delete</button>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Artworks Found!</h1>
+        <% } %>
+    </main>
+    <%- include('../includes/end.ejs') %>
+    <script src="/js/artist.js"></script>

@@ -1,0 +1,27 @@
+.artwork-form {
+  width: 20rem;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.artwork-item {
+  width: 20rem;
+  max-width: 95%;
+  margin: 1rem;
+}
+
+.artwork__title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.artwork__price {
+  text-align: center;
+  color: #4d4d4d;
+  margin-bottom: 0.5rem;
+}
+
+.artwork__description {
+  text-align: center;
+}

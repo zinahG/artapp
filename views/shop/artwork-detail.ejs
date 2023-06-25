@@ -1,0 +1,24 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1><%= artwork.title %></h1>
+            <hr>
+            <div class="image">
+                <img src="/<%= artwork.imageUrl %>" alt="<%= artwork.title %>">
+            </div>
+            <h2><%= artwork.price %></h2>
+            <p><%= artwork.description %></p>
+            <p>Artist Name: <%= artwork.artistName %></p>
+            <p>Status: <%= artwork.status %></p>
+            <p>Quantity: <%= artwork.quantity %></p>
+            <h3>Contact Information</h3>
+            <p>Email: <%= artwork.email %></p>
+            <p>Phone: <%= artwork.phone %></p>
+            <% if (isAuthenticated && isCustomer) { %>
+                <%- include('../includes/add-to-cart.ejs', {artwork: artwork}) %>
+            <% } %>
+        </main>
+        <%- include('../includes/end.ejs') %>
