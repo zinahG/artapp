@@ -17,7 +17,6 @@ const Admin = require('./models/admin');
 const customers = new Customer(); 
 const admins = new Admin();
 const MONGODB_URI =
-   'mongodb+srv://zina:xKqthTrSF4Uj4Bx9@artgallery.cchhryv.mongodb.net/artgallery';
  
 
 const app = express();
