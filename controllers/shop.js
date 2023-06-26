@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const stripe = require('stripe')('sk_test_51N9X95HInnxLtq2Kj6kv05rClvTjqIh0ljio5Sp7oWY1Qqq4PekJu7WPFJ9jyoNSX4yqE2rm7jg2WQkenQCdlvmc00XfLlCNOn');
 
 const PDFDocument = require('pdfkit');
 const Artwork = require('../models/artwork');
