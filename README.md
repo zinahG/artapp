@@ -1,4 +1,4 @@
-<img width="767" height="304" alt="Screenshot 2025-08-11 at 8 19 29 pm" src="https://github.com/user-attachments/assets/88c03e83-49e1-48dd-8194-1111d2547efe" /># 🎨 Art Gallery and Marketplace Web Application
+# 🎨 Art Gallery and Marketplace Web Application
 
 ## Abstract
 Due to the lack of fine art galleries and creative exhibits, artists in this country are severely constrained in how, when, and where they can sell and exhibit their work.  
