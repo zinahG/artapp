@@ -1,4 +1,4 @@
-# 🎨 Art Gallery and Marketplace Web Application
+<img width="767" height="304" alt="Screenshot 2025-08-11 at 8 19 29 pm" src="https://github.com/user-attachments/assets/88c03e83-49e1-48dd-8194-1111d2547efe" /># 🎨 Art Gallery and Marketplace Web Application
 
 ## Abstract
 Due to the lack of fine art galleries and creative exhibits, artists in this country are severely constrained in how, when, and where they can sell and exhibit their work.  
@@ -72,13 +72,16 @@ Customers can browse artworks and add them to their cart.
 ---
 
 ### 8. Cart Page (Customer)
-Displays artworks in the cart and their quantities.  
+Displays artworks in the cart and their quantities. 
+<img width="767" height="308" alt="Screenshot 2025-08-11 at 8 20 23 pm" src="https://github.com/user-attachments/assets/b2c7d13d-2a28-416d-8f05-73af04c3c466" />
 
 
 ---
 
 ### 9. Orders Page (Customer)
 Shows the final list of purchased artworks and total price.  
+<img width="766" height="371" alt="Screenshot 2025-08-11 at 8 20 46 pm" src="https://github.com/user-attachments/assets/81fa2401-2412-4910-aae6-3fbb8c8a65db" />
+
 
 
 ---
@@ -86,21 +89,25 @@ Shows the final list of purchased artworks and total price.
 ### 10. Checkout Page (Customer)
 Checkout process using **Stripe API** (test mode).  
 
+<img width="806" height="441" alt="Screenshot 2025-08-11 at 8 21 24 pm" src="https://github.com/user-attachments/assets/498cf00e-cc72-4db6-84cc-d80f9570a719" />
+
 
 ---
 
 ### 11. Admin – Delete Artwork Page
-Admin can delete any artwork flagged as non-original.  
+Admin can delete any artwork non-original.  
+<img width="757" height="405" alt="Screenshot 2025-08-11 at 8 21 41 pm" src="https://github.com/user-attachments/assets/c5474e76-99ca-4698-ab9e-235e64113194" />
+
 
 
 ---
 
 ## 🛠️ Tech Stack
 - **Backend:** Node.js, Express
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** EJS Templating Engine
 - **Database:** MongoDB
 - **Payments:** Stripe API (test mode)
-- **Authentication:** JWT-based
+- **Authentication:** session-based
 
 
 
