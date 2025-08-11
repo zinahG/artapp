@@ -22,12 +22,14 @@ Below are the main pages of the application. Each section includes a brief descr
 A user can sign up as either:
 - **Artist** → Upload and sell artwork
 - **Customer** → Browse and purchase artworks  
+<img width="897" height="366" alt="Screenshot 2025-08-11 at 7 57 49 pm" src="https://github.com/user-attachments/assets/b1d6bff0-3b55-46a8-bb57-7fb3cee23cc5" />
 
 
 ---
 
 ### 2. Login Page
 Shared login for all roles: **Admin, Artist, Customer**  
+<img width="918" height="334" alt="Screenshot 2025-08-11 at 8 01 34 pm" src="https://github.com/user-attachments/assets/55059327-e381-427c-9813-d691f66d7d6a" />
 
 
 ---
@@ -35,24 +37,28 @@ Shared login for all roles: **Admin, Artist, Customer**
 ### 3. Shop (Artist View)
 Navbar shows **Add Artwork** and **Profile** tabs (only for artists).  
 Artists can browse other artworks but cannot edit them.  
+<img width="806" height="480" alt="Screenshot 2025-08-11 at 8 04 48 pm" src="https://github.com/user-attachments/assets/2f4273c2-0a88-4f88-ac5b-f4a87d2f4c0a" />
 
 
 ---
 
 ### 4. Artwork Details Page
 View artwork details including title, price, and artist information.  
+<img width="794" height="396" alt="Screenshot 2025-08-11 at 8 05 59 pm" src="https://github.com/user-attachments/assets/aacaad26-dbc9-46a8-81b8-053bbda05f24" />
 
 
 ---
 
 ### 5. Add Artwork Page (Artist)
 Artists can upload an image, set price, title, and other details.  
+<img width="766" height="506" alt="Screenshot 2025-08-11 at 8 05 19 pm" src="https://github.com/user-attachments/assets/05588a92-1c32-4d80-80e9-f72371df5138" />
 
 
 ---
 
 ### 6. Edit/Update Artwork Page (Artist)
 Artists can modify their existing artworks.  
+<img width="797" height="514" alt="Screenshot 2025-08-11 at 8 05 40 pm" src="https://github.com/user-attachments/assets/0aa86c4c-701a-491b-997f-b60ee3daf661" />
 
 
 ---
@@ -61,6 +67,7 @@ Artists can modify their existing artworks.
 Navbar shows **Cart** and **Orders** tabs (only for customers).  
 Customers can browse artworks and add them to their cart.  
 
+<img width="740" height="428" alt="Screenshot 2025-08-11 at 8 06 23 pm" src="https://github.com/user-attachments/assets/267ab789-54a5-4780-baca-3d25c7fddbf2" />
 
 ---
 
